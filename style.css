@@ -7,10 +7,14 @@
 }
 
 body {
-  color: #fff;
+  color: #000;
   font-family: "Poppins", sans-serif;
   /* font-family: "Roboto Condensed", sans-serif; */
   background-color: #fff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   font-size: 4rem;
@@ -19,7 +23,7 @@ h2 {
   color: #f20505;
   font-size: 1.8rem;
   font-weight: normal;
-  height: 150px;
+  height: 200px;
   background-color: #fff;
 }
 span {
@@ -36,6 +40,11 @@ video {
 menu {
   position: absolute;
   z-index: 2;
+}
+.content {
+  margin: 0 auto;
+  width: 75%;
+  padding: 0 20px;
 }
 
 /* mobile view */
@@ -101,27 +110,26 @@ menu {
   .container_menu,
   .container_iks-info,
   .container_teams,
+  .container_volunteers,
+  .container_fast-rules,
+  .container_tournaments,
+  .container_join-us,
+  .container_story-iks,
   .container_footer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    /* border: 1px solid #000bdb; */
     background-color: #fff;
-  }
-  menu + section {
-    /* position: relative; */
   }
   .container_iks-info {
     position: relative;
     top: 0;
     width: 100%;
     max-width: none;
-    /* height: auto; */
-    height: 90vh;
+    height: 100vh;
     background-color: #000;
-    /* opacity: 0.5; */
     overflow: hidden;
   }
 
@@ -134,10 +142,15 @@ menu {
     width: 100%;
     height: 100%;
     color: #fff;
-    /* background-color: yellow; */
   }
 
-  /* teams  */
+  /* TEAMS  */
+  .t-1,
+  .t-2,
+  .t-3 {
+    flex-direction: column;
+    width: 32%;
+  }
   .container_teams div,
   h2 {
     display: flex;
@@ -145,54 +158,106 @@ menu {
     justify-content: center;
   }
   .container_teams p {
+    position: absolute;
     width: 100%;
+    color: #fff;
     text-align: center;
     padding: 15px 0;
     font-size: 1.3rem;
     background-color: #000;
-    opacity: 0.6;
+    opacity: 0.8;
   }
   .teams-1,
   .teams-2,
   .teams-3 {
-    width: 350px;
-    height: 350px;
-    background-size: 100%;
-    background-position: center;
-    border-radius: 20px;
+    position: relative;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
     transition: 0.6s;
   }
-  .teams-1:hover,
-  .teams-2:hover,
-  .teams-3:hover {
-    background-size: 120%;
+  .teams-1 img,
+  .teams-2 img,
+  .teams-3 img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid red;
+    transition: 0.6s;
   }
-  .teams-1 {
-    background-image: url(/img/iks_R5.png);
+  .teams-1 img:hover,
+  .teams-2 img:hover,
+  .teams-3 img:hover {
+    border: 5px solid red;
+    transform: rotate(15deg);
   }
-  .teams-2 {
-    background-image: url(/img/iks.png);
-  }
-  .teams-3 {
-    background-image: url(/img/iks_2.png);
-  }
+
   .iks-info {
     width: 100%;
-    height: 100%;
     padding: 30px;
-    line-height: 2rem;
     text-align: center;
-    background-color: #000;
-    opacity: 0.8;
+  }
+
+  /* volunteers */
+  .container_volunteers {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container_volunteers p {
+    width: 25%;
+    margin-right: 30px;
+    text-align: right;
+  }
+  .container_volunteers img {
+    margin: 20px 30px 20px 0;
+    border-radius: 20px;
+  }
+
+  /* fast rules */
+  .container_fast-rules {
+    width: 85%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container_fast-rules img,
+  .container_join-us img {
+    margin: 20px 30px 20px 0;
+    border-radius: 20px;
+  }
+
+  /* tournaments  */
+  .container_tournaments {
+    width: 85%;
+    align-items: center;
+  }
+
+  /* join us */
+  .container_join-us {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_join-us ol {
+    width: 40%;
+    padding-left: 10px;
+  }
+
+  /* story iks */
+  .container_story-iks {
+    padding-bottom: 60px;
+    text-align: justify;
   }
 
   /* footer  */
-
   footer {
+    color: #fff;
     background-color: #000;
   }
   .container_footer {
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     height: 270px;
     background-color: #000;
