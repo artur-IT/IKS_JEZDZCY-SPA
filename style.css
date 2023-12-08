@@ -16,23 +16,22 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   width: auto;
   text-align: center;
-  line-height: 5rem;
+  line-height: 3rem;
   letter-spacing: 3px;
-  padding: 30px 40px;
+  padding: 20px 20px;
   background-color: rgba(255, 0, 0, 0.4);
-  /* border-radius: 15px; */
 }
 h2 {
   color: #f20505;
   font-size: 1.8rem;
   font-weight: normal;
   height: 150px;
-  background-color: #fff;
 }
 span {
   font-size: 1.7rem;
@@ -58,12 +57,18 @@ a {
   font-weight: bold;
 }
 
-/* mobile view */
-@media (max-width: 1000px) {
+/* MOBILE VIEW */
+@media (max-width: 1120px) {
   .container {
     display: flex;
     flex-direction: column;
     width: 100vw;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1rem;
+    padding: 30px 30px;
+    animation: iksAnim 5s 0s, alternate, infinite;
   }
   h2 {
     height: 120px;
@@ -90,7 +95,7 @@ a {
     position: relative;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vw / 1.8);
     margin: 0 auto;
     background-color: #000;
     overflow: hidden;
@@ -167,14 +172,14 @@ a {
 
   /* volunteers */
   .container_volunteers {
+    transform: scale(0);
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
   .container_volunteers p {
-    width: 35%;
-    margin-right: 30px;
+    width: 50%;
     text-align: right;
   }
   .container_volunteers img {
@@ -183,10 +188,11 @@ a {
     transition: 0.6s;
   }
   .container_volunteers > img {
-    width: 350px;
+    margin: 0;
+    width: 35%;
   }
   section.container_volunteers img:nth-last-child(1) {
-    width: 150px !important;
+    width: 0% !important;
   }
   .container_volunteers img:hover {
     transform: scale(1.05);
@@ -194,6 +200,7 @@ a {
 
   /* fast rules */
   .container_fast-rules {
+    flex-wrap: wrap;
     width: 85%;
   }
   .container_fast-rules img,
@@ -205,7 +212,8 @@ a {
   /* tournaments  */
   .container_tournaments {
     align-items: center;
-    width: 95%;
+    flex-wrap: wrap;
+    width: 90%;
   }
   .container_tournaments p {
     padding: 0 2px;
@@ -214,11 +222,13 @@ a {
   /* join us */
   .container_join-us {
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .container_join-us ol {
-    width: 50%;
+    width: 60%;
+    list-style: none;
   }
 
   /* story iks */
@@ -229,7 +239,6 @@ a {
   /* footer  */
   footer {
     color: #fff;
-    background-color: #000;
   }
   .container_footer {
     width: 100%;
@@ -260,12 +269,11 @@ a {
     display: flex;
     justify-content: center;
     line-height: 1.5rem;
-    background-color: #000;
   }
 }
 
 /* desktop view */
-@media (min-width: 1001px) {
+@media (min-width: 1121px) {
   .container_menu,
   .container_iks-info,
   .container_teams,
@@ -332,6 +340,7 @@ a {
   .teams-1,
   .teams-2,
   .teams-3 {
+    visibility: hidden;
     position: relative;
     flex-direction: column;
     color: #fff;
@@ -346,7 +355,7 @@ a {
     margin-bottom: 20px;
     border-radius: 50%;
     border: 5px solid red;
-    transition: 0.6s;
+    transition: 0.4s;
   }
   .teams-1 img:hover,
   .teams-2 img:hover,
@@ -363,6 +372,7 @@ a {
 
   /* volunteers */
   .container_volunteers {
+    transform: scale(0);
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -384,13 +394,14 @@ a {
 
   /* fast rules */
   .container_fast-rules {
+    background: transparent;
     width: 85%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
   .container_fast-rules img,
   .container_join-us img {
-    margin: 20px 30px 20px 0;
+    margin: 20px 50px 20px 0;
     border-radius: 20px;
   }
 
@@ -402,6 +413,9 @@ a {
 
   /* join us */
   .container_join-us {
+    visibility: hidden;
+    position: relative;
+    right: 0%;
     width: 100%;
     justify-content: center;
     align-items: center;
