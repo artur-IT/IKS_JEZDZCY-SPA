@@ -13,7 +13,6 @@ logo.addEventListener("click", () => {
 });
 
 // ANIMATION CSS on scroll
-
 // height our teams
 const containerTeams = document.getElementsByClassName("teams-1");
 // height volunteers
@@ -30,17 +29,15 @@ show = () => {
   body.addEventListener("mousewheel", (e) => {
     const heightPageY = e.pageY;
     if (heightPageY > containerVolunteers[0].offsetTop - 500) {
-      volunteers.style.animation = "volunteers 2s";
-      volunteers.style["transform"] = "scale(1)";
+      volunteers.style.animation = "volunteers 2s both";
     }
     if (heightPageY > containerTeams[0].offsetTop - 400) {
       teams.forEach((item) => {
-        item.style.animation = "ourTeams 2s";
+        item.style.animation = "ourTeams 2s both";
         item.style.visibility = "visible";
       });
       if (heightPageY > containerJoinUs[0].offsetTop - 500) {
-        joinUs.style.animation = "joinUs 2s";
-        joinUs.style.visibility = "visible";
+        joinUs.style.animation = "joinUs 2s both";
       }
     }
   });

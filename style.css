@@ -34,11 +34,15 @@ h2 {
   height: 150px;
 }
 span {
+  position: relative;
+  right: 0%;
+  transform: scale(1);
   font-size: 1.7rem;
   font-weight: 300;
   width: 100%;
   text-align: center;
   padding: 15px 20px;
+  animation: joinUs 1s 2s both;
 }
 video {
   position: absolute;
@@ -68,7 +72,7 @@ a {
     font-size: 2.5rem;
     line-height: 1rem;
     padding: 30px 30px;
-    animation: iksAnim 5s 0s, alternate, infinite;
+    animation: iksAnim 2s alternate;
   }
   h2 {
     height: 120px;
@@ -141,6 +145,7 @@ a {
   .teams-1,
   .teams-2,
   .teams-3 {
+    visibility: hidden;
     position: relative;
     flex-direction: column;
     color: #fff;
@@ -221,6 +226,8 @@ a {
 
   /* join us */
   .container_join-us {
+    position: relative;
+    right: 0%;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -413,7 +420,6 @@ a {
 
   /* join us */
   .container_join-us {
-    visibility: hidden;
     position: relative;
     right: 0%;
     width: 100%;
