@@ -21,12 +21,11 @@ const containerVolunteers = document.getElementsByClassName("container_volunteer
 const containerJoinUs = document.getElementsByClassName("container_join-us");
 
 show = () => {
-  const body = document.querySelector("body");
   const teams = document.querySelectorAll(".container_teams div>div:nth-child(odd)");
   const volunteers = document.querySelector("section .container_volunteers");
   const joinUs = document.querySelector("section .container_join-us");
 
-  body.addEventListener("mousewheel", (e) => {
+  document.addEventListener("wheel", (e) => {
     const heightPageY = e.pageY;
     if (heightPageY > containerVolunteers[0].offsetTop - 500) {
       volunteers.style.animation = "volunteers 2s both";
@@ -43,4 +42,4 @@ show = () => {
   });
 };
 
-onDOMContentLoaded = () => show();
+show();
