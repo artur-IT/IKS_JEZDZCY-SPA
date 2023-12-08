@@ -43,4 +43,4 @@ show = () => {
   });
 };
 
-show();
+onDOMContentLoaded = () => show();
