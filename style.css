@@ -309,6 +309,11 @@ a {
     overflow: hidden;
   }
 
+  h1 {
+    transform: scale(0);
+    animation: iksAnim 2s 1s alternate both;
+  }
+
   .iks_title {
     position: relative;
     display: flex;
