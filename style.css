@@ -313,6 +313,7 @@ a {
     transform: scale(0);
     font-size: 2.5rem;
     line-height: 1rem;
+    padding: 30px 30px;
     animation: iksAnim 2s 1s alternate both;
   }
 
