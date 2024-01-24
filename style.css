@@ -244,6 +244,20 @@ a {
     text-align: justify;
   }
 
+  /* champions */
+  .container_champions {
+    margin: 0;
+    width: 100%;
+    min-height: 200px;
+    height: 400px;
+    background-color: #000;
+    background-image: url(img/champions.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+  }
+
   /* footer  */
   footer {
     color: #fff;
@@ -290,6 +304,7 @@ a {
   .container_tournaments,
   .container_join-us,
   .container_story-iks,
+  .container_champions,
   .container_footer {
     display: flex;
     justify-content: space-between;
@@ -443,6 +458,18 @@ a {
   .container_story-iks {
     padding-bottom: 60px;
     text-align: justify;
+  }
+
+  /* champions */
+  .container_champions {
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    background-image: url(img/champions.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
   }
 
   /* footer  */
